@@ -24,8 +24,8 @@ public class Get05 extends RestfulBaseUrl {
     public void get01() {
         //1-set the Url
         spec.pathParam("first", "booking").
-                queryParams("firstname", "Ali",
-                        "lastname", "Cengiz");
+                queryParams("firstname", "Kimie",
+                        "lastname", "Jackie");
 
 
         //2-set the expected data
