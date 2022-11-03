@@ -24,7 +24,7 @@ public class Get08c extends AutomationExerciseBaseUrl {
     And
         Status Line should be HTTP/1.1 200 OK
     And
-         There must be 12 Women, 9 Men, 13 Kids usertype in products
+
       */
 
 
