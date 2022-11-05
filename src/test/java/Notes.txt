@@ -1,4 +1,4 @@
-public class Notlar {
+
     /*
       API DERSİNDE NELER ÖĞRENECEKSİNİZ?
 
@@ -38,4 +38,4 @@ public class Notlar {
 
 * API den alınan response'ları bilgisayara text dosyası olarak kaydetme ve doğrulama yapma.
      */
-}
+
