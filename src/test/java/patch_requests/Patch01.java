@@ -46,6 +46,7 @@ I send PATCH Request to the Url
 
         //send the request and get the response
         Response response=given().spec(spec).contentType(ContentType.JSON).body(expectedData).when().patch("/{first}/{second}");
+        response.prettyPrint();
 
 
         //do assertion
