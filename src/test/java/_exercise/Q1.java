@@ -41,13 +41,22 @@ public class Q1 extends AutomationExerciseBaseUrl {
        //do assertion
        JsonPath jsonPath=response.jsonPath();
        List<String> brands=jsonPath.getList("brands.brand");
+
        long hM=brands.stream().filter(t->t.equals("H&M")).count();
        long polo=brands.stream().filter(t->t.equals("Polo")).count();
+
+        List<Integer> HMBrandsNumber=jsonPath.getList("brands.findAll{it.brand=='H&M'}.id");
+        List<Integer> PoloBrandsNumber=jsonPath.getList("brands.findAll{it.brand=='Polo'}.id");
+
+        int numberOfHM=HMBrandsNumber.size();
+        int numberOfPolo=PoloBrandsNumber.size();
+        System.out.println(numberOfHM);
+        System.out.println(numberOfPolo);
 
         assertEquals(200, response.getStatusCode());
         assertEquals("HTTP/1.1 200 OK", response.getStatusLine());
         assertEquals("text/html; charset=utf-8", response.getContentType());
-        assertTrue(polo>hM);
+        assertFalse(polo==hM);
 
 
 
